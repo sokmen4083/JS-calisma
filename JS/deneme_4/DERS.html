@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mehmet Sokmen's Login Page</title>
+    <link rel="stylesheet" href="/home/acer/Schreibtisch/JS/deneme_4/odev.css">
+</head>
+<body>  
+    <div class="container">
+        
+<h1>Please Log In</h1>
+<form method="post" action="login.php">
+<label for="email">Email</label>
+    <input type="text" id="email" name="email">
+    <br>
+<label for="4083Msga.">Password</label>
+    <input type="password" id="4083Msga." name="pass">
+    <br>
+<input type="submit" onclick="return doValidate();" value="Log In">
+<input type="submit" name="cancel" value="Cancel">
+    </form>
+
+<p>
+     For a password hint, view source and find an account and password hint in the HTML comments.
+    <!--Hint:
+    The account is umsi@umich.edu
+The password is the three chrachter name of the 
+programming language used in this class(all lower case)
+followed by 123.-->
+    </p>    
+        <script>
+        function doValidate(){
+            console.log('Validating');
+            try{
+                addr = document.getElementById('email').value;
+                pw = document.getElementById('4083Msga.').value;
+                console.log("Validating addr="+addr+" pw=" +pw);
+                if(addr == null || addr == "" || pw == null || pw == ""){
+                    alert("Both fields must be filled out");
+                    return false;
+                }
+                if(addr.indexOf('@') == -1){
+                    alert("Invalid email address");
+                    return false;
+                }
+                return false;
+            } catch(e) {
+                return false;
+            }
+            return false;
+        }
+        </script> 
+    
+ </div> 
+    </body>
+
+</html>
